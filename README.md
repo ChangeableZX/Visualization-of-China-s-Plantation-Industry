@@ -14,7 +14,7 @@
 ## 技术栈
 - **前端核心**：HTML5, CSS3, JavaScript
 - **数据处理**：JSON/CSV 数据解析
-- **可视化库**：ECharts / D3.js (根据你实际使用的库修改)
+- **可视化库**：ECharts / D3.js
 - **托管平台**：GitHub Pages
 
 ## 文件结构
