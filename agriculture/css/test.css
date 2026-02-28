@@ -1,0 +1,192 @@
+:root {
+  --color1: #34495e;
+  --color2: #7591AD;
+  --color3: #EC3E27;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+header {
+  position: relative;
+  height: 1rem;
+  margin: 0.125rem;
+  border-radius: 0.125rem;
+  background-color: #f4f7ec;
+  background-size: 100% 100%;
+}
+header h1 {
+  font-size: 0.575rem;
+  color: #2F4858;
+  text-align: center;
+  line-height: 1rem;
+  font-family: "楷体";
+}
+header .showTime {
+  position: absolute;
+  right: 0.375rem;
+  top: 0;
+  line-height: 0.9375rem;
+  color: #466A74;
+  font-size: 0.3rem;
+  font-family: "楷体";
+}
+h2 {
+  height: 0.6rem;
+  color: #2F4858;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+}
+body {
+  background-color: #fbfcf0;
+  line-height: 1.15;
+}
+.choosebox {
+  height: 1rem;
+}
+.choosebox .container2 {
+  display: flex;
+  gap: 0.5rem;
+  /* 增加单选项之间的间距 */
+  margin: 0.25rem;
+}
+.choosebox .container2 label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.choosebox .radio-label {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  border: 1px solid var(--color2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.1rem;
+  border-radius: 50%;
+  /* 确保这是一个圆 */
+  position: relative;
+}
+.choosebox .radio-label::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: var(--color2);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0) rotate(-180deg);
+  transform-origin: -2px 50%;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+.choosebox .container2 [type=radio] {
+  display: none;
+}
+.choosebox .container2 [type=radio]:checked + label .radio-label::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+.no {
+  background: rgba(101, 132, 226, 0.1);
+  width: 3rem;
+  margin-left: 45%;
+  margin-bottom: 0.2rem;
+}
+.no .no-hd {
+  position: relative;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.no .no-hd::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+  top: 0;
+  left: 0;
+}
+.no .no-hd::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  right: 0;
+  bottom: 0;
+}
+.no .no-hd ul {
+  display: flex;
+}
+.no .no-hd ul li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  color: #2F4858;
+  padding: 0.05rem 0;
+  font-family: electronicFont;
+  font-weight: bold;
+}
+.no .no-hd ul li:first-child::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  right: 0;
+  top: 25%;
+}
+.no .no-hd ul h1 {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0.05rem 0;
+  font-size: 0.575rem;
+  color: #2F4858;
+  font-family: "楷体";
+}
+.no .no-bd ul {
+  display: flex;
+}
+.no .no-bd ul li {
+  flex: 1;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.225rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 0.125rem;
+}
+.mainbox {
+  display: flex;
+  margin: 0 auto;
+}
+.mainbox .column {
+  flex: 1;
+}
+.mainbox .map {
+  position: relative;
+  height: 9.125rem;
+}
+.mainbox .map .china {
+  position: relative;
+  height: 9rem;
+}
